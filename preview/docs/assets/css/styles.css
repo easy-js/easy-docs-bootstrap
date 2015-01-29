@@ -7577,32 +7577,30 @@ i {
   z-index: 1000;
   display: block;
   padding: 0px;
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
 }
 @media (min-width: 768px) {
   .sidebar {
     right: auto;
     bottom: 0px;
+    width: 190px;
     overflow-x: hidden;
     overflow-y: auto;
     border-bottom: none;
-    background-color: #f4f6f7;
+    background: #222b33;
   }
 }
 /* 3. NAVBAR
 ----------------------------------------------------------------------------------------------------*/
 .navbar {
   margin: 0px;
-  background-color: #f4f6f7;
   border: none;
+  background: #222b33;
 }
 .navbar-brand {
   padding: 15px 10px;
-  color: #333;
 }
 .navbar-brand:hover {
-  color: #333 !important;
+  color: #fff !important;
 }
 .navbar-brand small {
   font-size: 65%;
@@ -7615,10 +7613,8 @@ i {
 .navbar-toggle {
   margin: 8px 10px;
   padding: 9px 0px;
-  border: none;
-}
-.navbar-toggle .icon-bar {
-  background: #333;
+  border: none !important;
+  background: none !important;
 }
 .navbar-github {
   color: #fff;
@@ -7626,6 +7622,10 @@ i {
 .navbar-stars {
   display: none;
   margin: 16px 12px 0 0;
+}
+.navbar-collapse {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 @media (min-width: 768px) {
   .navbar-brand {
@@ -7662,20 +7662,23 @@ i {
 .nav-sidebar {
   padding: 0;
   border-bottom: 1px solid #e2e8ea;
-  background-color: #f4f6f7;
+  background: #222b33;
 }
 .nav-sidebar > li > a {
   position: relative;
   display: block;
   padding: 5px 15px;
-  color: #474747;
+  color: #ffffff;
+}
+.nav-sidebar > li:last-child {
+  margin-bottom: 10px;
 }
 .nav-sidebar > li > a:hover {
   font-weight: bold;
   background: none;
 }
 .nav-sidebar-sub > li > a {
-  color: #777;
+  color: #ccc;
   padding: 3px 25px;
 }
 .nav-sidebar-sub > li > a:hover {
@@ -7746,7 +7749,10 @@ i {
 .main .documentation > .container-fluid > .row:last-child {
   padding-bottom: 20px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
+  .main {
+    margin-left: 190px;
+  }
   .main h1 a,
   .main h2 a,
   .main h3 a,
@@ -7756,6 +7762,8 @@ i {
     margin-top: -20px;
     padding-top: 20px;
   }
+}
+@media (min-width: 1200px) {
   .main .col-usage {
     background: #f4f6f7;
   }
