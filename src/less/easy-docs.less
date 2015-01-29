@@ -1,0 +1,284 @@
+/*!
+* styles.css
+* Version: 1.0
+*/
+ 
+/*** TABLE OF CONTENTS ***
+*
+* 1. BASE
+* 2. NAV
+* 3. SIDEBAR
+* 4. MAIN CONTENT
+*/
+
+
+@import "variables.less";
+@import "../../bower_components/bootstrap/less/mixins.less";
+
+
+/* 1. BASE
+----------------------------------------------------------------------------------------------------*/
+
+body {
+  margin-top: 52px;
+}
+
+i {
+  margin-right: 5px;
+}
+
+.hljs {
+  background: none;
+}
+
+@media (min-width: @screen-sm-min) {
+  body {
+    margin-top: 0px;
+  }
+}
+
+
+/* 2. SIDEBAR
+----------------------------------------------------------------------------------------------------*/
+
+.sidebar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1000;
+  display: block;
+  padding: 0px;
+  .box-shadow(0px 0px 3px rgba(0, 0, 0, 0.15));
+}
+
+@media (min-width: @screen-sm-min) {
+  .sidebar {
+    right: auto;
+    bottom: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-bottom: none;
+    background-color: #f4f6f7;
+  }
+}
+
+
+/* 3. NAVBAR
+----------------------------------------------------------------------------------------------------*/
+
+.navbar {
+  margin: 0px;
+  background-color: #f4f6f7;
+  border: none;
+}
+
+.navbar-brand {
+  padding: 15px 10px;
+  color: #333;
+}
+
+.navbar-brand:hover {
+  color: #333 !important;
+}
+
+.navbar-brand small {
+  font-size: 65%;
+}
+
+.navbar-brand i {
+  font-size: 18px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.navbar-toggle {
+  margin: 8px 10px;
+  padding: 9px 0px;
+  border: none;
+}
+
+.navbar-toggle .icon-bar {
+  background: #333;
+}
+
+.navbar-github {
+  color: #fff;
+}
+
+.navbar-stars {
+  display: none;
+  margin: 16px 12px 0 0;
+}
+
+@media (min-width: @screen-sm-min) {
+  .navbar-brand {
+    font-size: 24px;
+  }
+
+  .navbar-brand small {
+    font-size: 55%;
+  }
+
+  .navbar {
+    position: relative;
+    margin: 0px;
+    padding: 30px 20px;
+    border-radius: 0px;
+  }
+
+  .navbar-brand {
+    display: block;
+    padding: 0px;
+    float: none;
+    height: auto;
+  }
+
+  .navbar-brand i {
+    display: none;
+  }
+
+  .navbar-brand small {
+    margin-top: 5px;
+    display: block;
+  }
+
+  .navbar-stars {
+    display: block;
+  }
+}
+
+
+/* 3. NAV-SIDEBAR
+----------------------------------------------------------------------------------------------------*/
+
+.nav-sidebar {
+  padding: 0;
+  border-bottom: 1px solid #e2e8ea;
+  background-color: #f4f6f7;
+}
+
+.nav-sidebar > li > a {
+  position: relative;
+  display: block;
+  padding: 5px 15px;
+  color: darken(@body-bg, 70%);
+}
+
+.nav-sidebar > li > a:hover {
+  font-weight: bold;
+  background: none;
+}
+
+.nav-sidebar-sub > li > a {
+  color: #777;
+  padding: 3px 25px;
+}
+
+.nav-sidebar-sub > li > a:hover {
+  font-weight: bold;
+  background: none;
+}
+
+.nav-sidebar .active > a {
+  font-weight: bold
+}
+
+@media (min-width: @screen-sm-min) {
+  .nav-sidebar {
+    max-height: none;
+    border-bottom: none;
+  }
+}
+
+
+/* 4. MAIN CONTENT
+----------------------------------------------------------------------------------------------------*/
+
+.main {
+  padding: 0 0 20px 0;
+}
+
+.main h1,
+.main h2,
+.main h3,
+.main h4,
+.main h5,
+.main h6 {
+  margin: 0;
+  padding: 20px 0 10px 0;
+}
+
+.main h1 a,
+.main h2 a,
+.main h3 a,
+.main h4 a,
+.main h5 a,
+.main h6 a {
+  display: block;
+  margin-top: -70px;
+  padding-top: 70px;
+  border: none;
+  outline: none;
+}
+
+.main pre {
+  background-color: #f4f6f7;
+  border: 1px solid darken(@body-bg, 10%);
+}
+
+.main [class*="col-"] {
+  padding-top: 1px;
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
+
+.main .col-desc {
+  background: #f9f9f9;
+  border-right: 1px solid darken(@body-bg, 3%);
+}
+
+.main .row {
+  overflow: hidden;
+}
+
+.main .row-title {
+  padding-bottom: 0;
+}
+
+.main > .container-fluid > .documentation {
+  margin-top: 30px;
+  padding-bottom: 0;
+  width: auto;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.main .documentation > .container-fluid > .row:last-child {
+  padding-bottom: 20px;
+}
+
+@media (min-width: @screen-lg-min) {
+  .main h1 a,
+  .main h2 a,
+  .main h3 a,
+  .main h4 a,
+  .main h5 a,
+  .main h6 a {
+    margin-top: -20px;
+    padding-top: 20px;
+  }
+
+  .main .col-usage {
+    background: #f4f6f7;
+  }
+
+  .main .col-usage pre {
+    padding: 50px 0px 0px 0px;
+    border: none;
+  }
+
+  .main > .container-content > * {
+    width: 50%;
+  }
+}

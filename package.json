@@ -1,0 +1,31 @@
+{
+  "name": "easy-docs-bootstrap",
+  "description": "Bootstrap theme for easy-docs.",
+  "author": "Jarid Margolin <jarid@firstopinion.co>",
+  "version": "0.0.1",
+  "homepage": "https://github.com/easy-js/easy-docs-bootstrap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/easy-js/easy-docs-bootstrap"
+  },
+  "bugs": {
+    "url": "https://github.com/easy-js/easy-docs-bootstrap/issues"
+  },
+  "main": "./lib/index.js",
+  "devDependencies": {
+    "easy-docs": "~0.0.1",
+    "grunt": "~0.4.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.9.0",
+    "grunt-contrib-jshint": "~0.9.2",
+    "grunt-contrib-less": "~0.11.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.0",
+    "matchdep": "~0.3.0",
+    "mocha": "~1.18.2"
+  },
+  "license": "MIT"
+}

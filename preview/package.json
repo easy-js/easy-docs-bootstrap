@@ -1,0 +1,15 @@
+{
+  "name": "easy-docs",
+  "version": "0.0.1",
+  "description": "Bootstrap theme for easy-docs.",
+  "author": "Jarid Margolin <jarid@firstopinion.co>",
+  "homepage": "https://github.com/easy-js/easy-docs-bootstrap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/easy-js/easy-docs-bootstrap"
+  },
+  "bugs": {
+    "url": "https://github.com/easy-js/easy-docs-bootstrap/issues"
+  },
+  "license": "MIT"
+}
