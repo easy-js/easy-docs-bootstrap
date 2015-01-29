@@ -49,17 +49,17 @@ i {
   z-index: 1000;
   display: block;
   padding: 0px;
-  .box-shadow(0px 0px 3px rgba(0, 0, 0, 0.15));
 }
 
 @media (min-width: @screen-sm-min) {
   .sidebar {
     right: auto;
     bottom: 0px;
+    width: 190px;
     overflow-x: hidden;
     overflow-y: auto;
     border-bottom: none;
-    background-color: #f4f6f7;
+    background: #222b33;
   }
 }
 
@@ -69,17 +69,16 @@ i {
 
 .navbar {
   margin: 0px;
-  background-color: #f4f6f7;
   border: none;
+  background: #222b33;
 }
 
 .navbar-brand {
   padding: 15px 10px;
-  color: #333;
 }
 
 .navbar-brand:hover {
-  color: #333 !important;
+  color: #fff !important;
 }
 
 .navbar-brand small {
@@ -95,11 +94,8 @@ i {
 .navbar-toggle {
   margin: 8px 10px;
   padding: 9px 0px;
-  border: none;
-}
-
-.navbar-toggle .icon-bar {
-  background: #333;
+  border: none !important;
+  background: none !important;
 }
 
 .navbar-github {
@@ -109,6 +105,10 @@ i {
 .navbar-stars {
   display: none;
   margin: 16px 12px 0 0;
+}
+
+.navbar-collapse {
+  .box-shadow(none);
 }
 
 @media (min-width: @screen-sm-min) {
@@ -155,14 +155,18 @@ i {
 .nav-sidebar {
   padding: 0;
   border-bottom: 1px solid #e2e8ea;
-  background-color: #f4f6f7;
+  background: #222b33;
 }
 
 .nav-sidebar > li > a {
   position: relative;
   display: block;
   padding: 5px 15px;
-  color: darken(@body-bg, 70%);
+  color: #fff
+}
+
+.nav-sidebar > li:last-child {
+  margin-bottom: 10px;
 }
 
 .nav-sidebar > li > a:hover {
@@ -171,7 +175,7 @@ i {
 }
 
 .nav-sidebar-sub > li > a {
-  color: #777;
+  color: #ccc;
   padding: 3px 25px;
 }
 
@@ -258,7 +262,11 @@ i {
   padding-bottom: 20px;
 }
 
-@media (min-width: @screen-lg-min) {
+@media (min-width: @screen-sm-min) {
+  .main {
+    margin-left: 190px;
+  }
+
   .main h1 a,
   .main h2 a,
   .main h3 a,
@@ -268,7 +276,9 @@ i {
     margin-top: -20px;
     padding-top: 20px;
   }
+}
 
+@media (min-width: @screen-lg-min) {
   .main .col-usage {
     background: #f4f6f7;
   }
