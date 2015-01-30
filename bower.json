@@ -1,6 +1,6 @@
 {
   "name": "easy-docs-bootstrap",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "devDependencies": {
     "bootstrap": "~3.1.1",
     "requirejs": "~2.1.11",
