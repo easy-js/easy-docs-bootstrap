@@ -1,4 +1,7 @@
 <ul class="nav collapse navbar-collapse nav-sidebar sidebar-navbar-collapse">
+  {{#pages}}
+    {{~>button curPage=../pageName~}}
+  {{/pages}}
   {{#outline~}}
     {{~>link~}}
   {{/outline~}}
