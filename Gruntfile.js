@@ -31,6 +31,11 @@ grunt.registerTask('easydocs', 'Build docs.', function (grunt) {
     theme: theme,
     pages: [{
       fileName: 'index.html',
+      pageName: 'Documentation',
+      sections: ['getting-started.md', 'easydocs', 'license.md']
+    }, {
+      fileName: 'examples.html',
+      pageName: 'Examples',
       sections: ['getting-started.md', 'easydocs', 'license.md']
     }]
   });

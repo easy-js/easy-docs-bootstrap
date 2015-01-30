@@ -7577,16 +7577,18 @@ i {
   z-index: 1000;
   display: block;
   padding: 0px;
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient(135deg, #222b33, #3b4a59);
+  background-image: linear-gradient(135deg, #222b33, #3b4a59);
 }
 @media (min-width: 768px) {
   .sidebar {
     right: auto;
     bottom: 0px;
-    width: 190px;
+    width: 200px;
     overflow-x: hidden;
     overflow-y: auto;
     border-bottom: none;
-    background: #222b33;
   }
 }
 /* 3. NAVBAR
@@ -7594,7 +7596,7 @@ i {
 .navbar {
   margin: 0px;
   border: none;
-  background: #222b33;
+  background: none;
 }
 .navbar-brand {
   padding: 15px 10px;
@@ -7662,33 +7664,63 @@ i {
 .nav-sidebar {
   padding: 0;
   border-bottom: 1px solid #e2e8ea;
-  background: #222b33;
+  background: none;
+}
+.nav-sidebar > li {
+  padding: 0 10px;
 }
 .nav-sidebar > li > a {
   position: relative;
   display: block;
-  padding: 5px 15px;
+  padding: 5px 10px;
   color: #ffffff;
+}
+.nav-sidebar > li > .btn {
+  margin-top: 5px;
+  padding: 7px 10px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.15);
+}
+.nav-sidebar > li > .btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+.nav-sidebar > li > .btn-last {
+  margin-bottom: 20px;
+}
+.nav-sidebar > li > .btn-active {
+  opacity: 0.5;
+  pointer-events: none;
 }
 .nav-sidebar > li:last-child {
   margin-bottom: 10px;
 }
 .nav-sidebar > li > a:hover {
+  color: #fff;
   font-weight: bold;
   background: none;
 }
 .nav-sidebar-sub > li > a {
   color: #ccc;
-  padding: 3px 25px;
+  padding: 3px 20px;
 }
 .nav-sidebar-sub > li > a:hover {
   font-weight: bold;
   background: none;
 }
-.nav-sidebar .active > a {
-  font-weight: bold;
+.nav-sidebar .active > a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: white;
 }
 @media (min-width: 768px) {
+  .nav-sidebar > li {
+    padding: 0 15px;
+  }
   .nav-sidebar {
     max-height: none;
     border-bottom: none;
@@ -7751,7 +7783,7 @@ i {
 }
 @media (min-width: 768px) {
   .main {
-    margin-left: 190px;
+    margin-left: 200px;
   }
   .main h1 a,
   .main h2 a,
