@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>easy-docs - Documentation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body screen_capture_injected="true">
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="sidebar"><div class="navbar navbar-inverse" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://github.com/easy-js/easy-docs-bootstrap">
+      easy-docs
+      <small>(v0.0.1)</small>
+      <i class="fa fa-github"></i>
+    </a>
+      <iframe class="navbar-stars" src="https://ghbtns.com/github-btn.html?user=easy-js&amp;repo=easy-docs-bootstrap&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+  </div>
+</div><ul class="nav collapse navbar-collapse nav-sidebar sidebar-navbar-collapse">
+<li>
+  <a class="btn btn-first btn-last btn-active" href="./index.html">Documentation</a>
+</li>
+
+
+
+<li>
+  <a href="#moduleclass">
+  
+  ModuleClass
+</a>
+<ul class="nav nav-sidebar-sub">
+<li>
+  <a href="#classmethod">
+  
+  classMethod
+</a>
+</li></ul></li><li>
+  <a href="#moduleobject">
+  
+  moduleObject
+</a>
+<ul class="nav nav-sidebar-sub">
+<li>
+  <a href="#objectmethod">
+  
+  objectMethod
+</a>
+</li></ul></li><li>
+  <a href="#modulefunction">
+  
+  moduleFunction
+</a>
+</li></ul></div>
+ 
+      <div class="main">
+        <div class="container-fluid container-content">
+          <div class="documentation row">
+  <div class="container-fluid">
+    <div class="row"><div class="col-lg-6 col-desc"><h2>
+  <a id="moduleclass" href="#moduleclass" class="anchor" name="moduleclass"><span class="header-link"></span></a>
+  ModuleClass
+</h2>
+<p>Class used to test jsdoc templating. This class will start very minimal
+and grow as various documenting use cases become apparent.</p><div class="label label-info radius ctx-type">Class</div> <span>ModuleClass(opts)</span>  <h4>Parameters</h4>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width:15%">Name</th>
+        <th style="width:15%">Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>opts</td>
+        <td>object</td>
+        <td>ModuleClass options.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>opts</h5>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width:15%">Name</th>
+        <th style="width:15%">Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>prop1</td>
+        <td>string</td>
+        <td>A very import property.</td>
+      </tr>
+      <tr>
+        <td>prop2</td>
+        <td>string</td>
+        <td>A less important property.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="col-lg-6 col-usage">  <pre><code>var module = new ModuleClass({
+  prop1: &#x27;super duper important&#x27;
+  prop2: &#x27;ehhh&#x27;
+});</code></pre>
+</div></div>
+
+    <div class="row"><div class="col-lg-6 col-desc"><h3>
+  <a id="classmethod" href="#classmethod" class="anchor" name="classmethod"><span class="header-link"></span></a>
+  classMethod
+</h3>
+<p>A method that accepts some arguments and returns something.</p><div class="label label-info radius ctx-type">Function</div> <span>classMethod(str, arr, obj, callback)</span>  <h4>Parameters</h4>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width:15%">Name</th>
+        <th style="width:15%">Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>str</td>
+        <td>striing</td>
+        <td>A primitive string.</td>
+      </tr>
+      <tr>
+        <td>arr</td>
+        <td>Array</td>
+        <td>An array of some numbers.</td>
+      </tr>
+      <tr>
+        <td>obj</td>
+        <td>Object</td>
+        <td>Props and values yo.</td>
+      </tr>
+      <tr>
+        <td>callback</td>
+        <td>function</td>
+        <td>Callback after you have done something sweet.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h4>Returns</h4>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width:20%">Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>string</td>
+        <td>A modified string.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="col-lg-6 col-usage">  <pre><code>module.method(&#x27;string&#x27;, [0, 1], {
+  prop: &#x27;value&#x27;
+}, function () {});</code></pre>
+</div></div>
+
+
+    <div class="row">
+      <div class="col-lg-6 col-desc"><h2>
+  <a id="moduleobject" href="#moduleobject" class="anchor" name="moduleobject"><span class="header-link"></span></a>
+  moduleObject
+</h2>
+<p>Class used to test jsdoc templating. This class will start very minimal
+and grow as various documenting use cases become apparent.</p></div>
+      <div class="col-lg-6 col-usage">
+      </div>
+    </div>
+
+    <div class="row"><div class="col-lg-6 col-desc"><h3>
+  <a id="objectmethod" href="#objectmethod" class="anchor" name="objectmethod"><span class="header-link"></span></a>
+  objectMethod
+</h3>
+<p>Class used to test jsdoc templating. This class will start very minimal
+and grow as various documenting use cases become apparent.</p><div class="label label-info radius ctx-type">Function</div> <span>objectMethod(opts)</span>  <h4>Parameters</h4>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width:15%">Name</th>
+        <th style="width:15%">Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>opts</td>
+        <td>object</td>
+        <td>moduleFunction options.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>opts</h5>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width:15%">Name</th>
+        <th style="width:15%">Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>prop1</td>
+        <td>string</td>
+        <td>A very import property.</td>
+      </tr>
+      <tr>
+        <td>prop2</td>
+        <td>string</td>
+        <td>A less important property.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="col-lg-6 col-usage">  <pre><code>moduleObject.method({
+  prop1: &#x27;super duper important&#x27;
+  prop2: &#x27;ehhh&#x27;
+});</code></pre>
+</div></div>
+
+
+    <div class="row"><div class="col-lg-6 col-desc"><h2>
+  <a id="modulefunction" href="#modulefunction" class="anchor" name="modulefunction"><span class="header-link"></span></a>
+  moduleFunction
+</h2>
+<p>Class used to test jsdoc templating. This class will start very minimal
+and grow as various documenting use cases become apparent.</p><div class="label label-info radius ctx-type">Function</div> <span>moduleFunction(opts)</span>  <h4>Parameters</h4>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width:15%">Name</th>
+        <th style="width:15%">Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>opts</td>
+        <td>object</td>
+        <td>moduleFunction options.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>opts</h5>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width:15%">Name</th>
+        <th style="width:15%">Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>prop1</td>
+        <td>string</td>
+        <td>A very import property.</td>
+      </tr>
+      <tr>
+        <td>prop2</td>
+        <td>string</td>
+        <td>A less important property.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="col-lg-6 col-usage">  <pre><code>moduleFunction({
+  prop1: &#x27;super duper important&#x27;
+  prop2: &#x27;ehhh&#x27;
+});</code></pre>
+</div></div>
+
+</div>
+</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="assets/js/easy-docs.js"></script>
+
+  </body>
+</html>

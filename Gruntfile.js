@@ -29,14 +29,28 @@ grunt.registerTask('easydocs', 'Build docs.', function (grunt) {
   var easydocs = new Easydocs({
     root: './preview',
     theme: theme,
+    data: {
+      versions: ['0.0.3', '0.0.2', '0.0.1']
+    },
     pages: [{
       fileName: 'index.html',
-      pageName: 'Documentation',
-      sections: ['getting-started.md', 'easydocs', 'license.md']
+      pageName: 'Easydocs',
+      sections: ['getting-started.md', 'license.md']
     }, {
-      fileName: 'examples.html',
-      pageName: 'Examples',
-      sections: ['getting-started.md', 'easydocs', 'license.md']
+      fileName: 'module-class.html',
+      pageName: 'Module Class',
+      src: './src/module-class.js',
+      sections: ['easydocs']
+    }, {
+      fileName: 'module-object.html',
+      pageName: 'Module Object',
+      src: './src/module-object.js',
+      sections: ['easydocs']
+    }, {
+      fileName: 'module-function.html',
+      pageName: 'Module Function',
+      src: './src/module-function.js',
+      sections: ['easydocs']
     }]
   });
 
