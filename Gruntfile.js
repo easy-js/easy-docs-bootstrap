@@ -122,7 +122,6 @@ grunt.initConfig({
     },
     js: {
       src: [
-        'bower_components/highlightjs/highlight.pack.js',
         'src/assets/js/easy-docs.js'
       ],
       dest: 'dist/assets/js/easy-docs.js'
@@ -130,8 +129,7 @@ grunt.initConfig({
     css: {
       src: [
         'src/assets/css/bootstrap.css',
-        'bower_components/font-awesome/css/font-awesome.css',
-        'bower_components/highlightjs/styles/github.css',
+        'node_modules/font-awesome/css/font-awesome.css',
         'src/assets/css/theme.css',
         'src/assets/css/easy-docs.css'
       ],
@@ -177,8 +175,8 @@ grunt.initConfig({
     },
     fonts: {
       files: [
-        { expand: true, src: ['**'], cwd: 'bower_components/bootstrap/dist/fonts', dest: 'dist/assets/fonts' },
-        { expand: true, src: ['**'], cwd: 'bower_components/font-awesome/fonts', dest: 'dist/assets/fonts' }
+        { expand: true, src: ['**'], cwd: 'node_modules/bootstrap/dist/fonts', dest: 'dist/assets/fonts' },
+        { expand: true, src: ['**'], cwd: 'node_modules/font-awesome/fonts', dest: 'dist/assets/fonts' }
       ]
     },
     tmpls: {
