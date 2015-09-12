@@ -91,6 +91,11 @@ i {
   margin-left: 5px;
 }
 
+.navbar-brand select {
+  margin-top: 8px;
+  height: 26px;
+}
+
 .navbar-toggle {
   margin: 8px 10px;
   padding: 9px 0px;
@@ -112,19 +117,23 @@ i {
 }
 
 @media (min-width: @screen-sm-min) {
+  .navbar {
+    position: relative;
+    margin: 0px;
+    padding: 30px 15px;
+    border-radius: 0px;
+  }
+
+  .navbar-header {
+    float: none;
+  }
+
   .navbar-brand {
     font-size: 24px;
   }
 
   .navbar-brand small {
     font-size: 55%;
-  }
-
-  .navbar {
-    position: relative;
-    margin: 0px;
-    padding: 30px 20px;
-    border-radius: 0px;
   }
 
   .navbar-brand {
@@ -283,6 +292,11 @@ i {
 
 .main .row-title {
   padding-bottom: 0;
+}
+
+.main > .container-fluid > .row:first-child {
+  margin-top: 0;
+  border-top: none;
 }
 
 .main > .container-fluid > .documentation {

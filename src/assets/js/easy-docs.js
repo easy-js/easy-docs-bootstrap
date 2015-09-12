@@ -21,8 +21,14 @@ $('body').scrollspy({
 });
 
 // Update ScrollSpy on Resize
-$( window ).resize(function() {
+$(window).resize(function() {
   $('body').scrollspy('refresh');
+});
+
+// Version select menu
+var $versions = $('.version-select');
+$versions.on('change', function () {
+  window.location.href = $versions.val();
 });
 
 })();

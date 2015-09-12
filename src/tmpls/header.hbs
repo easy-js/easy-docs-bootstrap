@@ -6,9 +6,17 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{{pkg.homepage}}">
       {{pkg.name}}
+      {{#if versions}}
+        <select class="form-control version-select">
+          {{#versions}}
+          <option value="{{pkg.homepage}}/{{.}}">v{{.}}</option>
+          {{/versions}}
+        </select>
+      {{else}}
       <small>(v{{pkg.version}})</small>
+      {{/if}}
       {{#pkg.repository}}
       <i class="fa fa-github"></i>
       {{/pkg.repository}}
