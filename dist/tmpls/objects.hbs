@@ -1,0 +1,27 @@
+{{#objects}}
+  <h5>{{name}}</h5>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th style="width:15%">Name</th>
+        <th style="width:15%">Type</th>
+        {{#if ../hasDefault}}
+        <th style="width:15%">Default</th>
+        {{/if}}
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#properties}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{type}}</td>
+        {{#if ../../hasDefault}}
+        <td>{{default}}</td>
+        {{/if}}
+        <td>{{description}}</td>
+      </tr>
+      {{/properties}}
+    </tbody>
+  </table>
+{{/objects}}

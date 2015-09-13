@@ -1,0 +1,19 @@
+{{#if namespaces}}
+
+  {{#namespaces}}
+    <div class="row">
+      <div class="col-lg-6 col-desc">
+        {{~>definition heading="2"~}}
+      </div>
+      <div class="col-lg-6 col-usage">
+      </div>
+    </div>
+
+    {{#functions}}
+    <div class="row">
+      {{~>method type="Function"~}}
+    </div>
+    {{/functions}}
+  {{/namespaces}}
+
+{{/if}}
