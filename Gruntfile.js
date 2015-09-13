@@ -20,40 +20,16 @@ module.exports = function (grunt) {
 
 
 /* -----------------------------------------------------------------------------
- * easydocs 
+ * custom tasks
  * ---------------------------------------------------------------------------*/
 
-grunt.registerTask('easydocs', 'Build docs.', function (grunt) {
+grunt.registerMultiTask('easydocs', 'Build docs.', function (grunt) {
+  // async... as always (this should be a default)
   var done = this.async();
 
-  var easydocs = new Easydocs({
-    root: './preview',
-    theme: theme,
-    data: {
-      versions: ['0.0.3', '0.0.2', '0.0.1']
-    },
-    pages: [{
-      fileName: 'index.html',
-      pageName: 'Easydocs',
-      sections: ['getting-started.md', 'license.md']
-    }, {
-      fileName: 'module-class.html',
-      pageName: 'Module Class',
-      src: './src/module-class.js',
-      sections: ['easydocs']
-    }, {
-      fileName: 'module-object.html',
-      pageName: 'Module Object',
-      src: './src/module-object.js',
-      sections: ['easydocs']
-    }, {
-      fileName: 'module-function.html',
-      pageName: 'Module Function',
-      src: './src/module-function.js',
-      sections: ['easydocs']
-    }]
-  });
-
+  // options/defaults
+  var options = this.options();
+  var easydocs = new Easydocs(options);
   easydocs.generate(done);
 });
 
@@ -95,7 +71,7 @@ grunt.initConfig({
     gfx: ['dist/assets/gfx'],
     fonts: ['dist/assets/fonts'],
     tmpls: ['dist/tmpls'],
-    docs: ['preview/docs']
+    docs: ['preview/multi-page', 'preview/single-page']
   },
 
 
@@ -235,8 +211,53 @@ grunt.initConfig({
   'connect': {
     dev: {
       options: {
-        base: 'preview/docs',
+        base: 'preview',
         port: 8001
+      }
+    }
+  },
+
+  /* ---------------------------------------------------------------------------
+   * easydocs
+   * -------------------------------------------------------------------------*/
+
+  'easydocs': {
+    options: {
+      root: './preview',
+      theme: theme
+    },
+    singlePage: {
+      options: {
+        src: './src',
+        dest: './single-page',
+        fileName: 'index.html',
+        pageName: 'Easydocs',
+        sections: ['getting-started.md', 'license.md']
+      }
+    },
+    multiPage: {
+      options: {
+        dest: './multi-page',
+        pages: [{
+          fileName: 'index.html',
+          pageName: 'Easydocs',
+          sections: ['getting-started.md', 'license.md']
+        }, {
+          fileName: 'module-class.html',
+          pageName: 'Module Class',
+          src: './src/module-class.js',
+          sections: ['easydocs']
+        }, {
+          fileName: 'module-object.html',
+          pageName: 'Module Object',
+          src: './src/module-object.js',
+          sections: ['easydocs']
+        }, {
+          fileName: 'module-function.html',
+          pageName: 'Module Function',
+          src: './src/module-function.js',
+          sections: ['easydocs']
+        }]
       }
     }
   }

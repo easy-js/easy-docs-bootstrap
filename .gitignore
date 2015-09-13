@@ -21,3 +21,4 @@ sauce_connect.log
 tmp
 
 /dist
+/preview/*-page
