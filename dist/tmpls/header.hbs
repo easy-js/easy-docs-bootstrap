@@ -1,0 +1,28 @@
+<div class="navbar navbar-inverse" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="{{pkg.homepage}}">
+      {{pkg.name}}
+      {{#if versions}}
+        <select class="form-control version-select">
+          {{#versions}}
+          <option value="{{pkg.homepage}}/{{.}}">v{{.}}</option>
+          {{/versions}}
+        </select>
+      {{else}}
+      <small>(v{{pkg.version}})</small>
+      {{/if}}
+      {{#pkg.repository}}
+      <i class="fa fa-github"></i>
+      {{/pkg.repository}}
+    </a>
+    {{#pkg.repository}}
+      <iframe class="navbar-stars" src="https://ghbtns.com/github-btn.html?user={{user url}}&amp;repo={{repo url}}&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+    {{/pkg.repository}}
+  </div>
+</div>
